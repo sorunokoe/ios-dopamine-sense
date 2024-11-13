@@ -94,7 +94,7 @@ Static libraries when possible & Mergable dynamic libraries
     - Memory analyzer 🟡
 - ☀️ Daily
     - Archive ✅
-- 🤖 Performance
+- 🤖 Performance [~10min]
     - Build ✅
     - Test: Performance Test Plan ✅
 
@@ -102,21 +102,21 @@ Static libraries when possible & Mergable dynamic libraries
 
 ## Our strategy
 ### What is true about our development process?
-- ⭕️ We want to deliver frequently, stable, high-quality, measurable, testable, scalable and automatable features.
-- ⭕️ We want to grow as a team reviewing the development process based on the metrics.
-- ⭕️ We want to optimize development time and automate tasks when possible
-- ⭕️ We want to avoid dialects.
+- 🟢 We want to deliver frequently, stable, high-quality, measurable, testable, scalable and automatable features.
+- 🟢 We want to grow as a team reviewing the development process based on the metrics.
+- 🟢 We want to optimize development time and automate tasks when possible
+- 🟢 We want to avoid dialects.
 - ❓ If there will be millions of users - what is our strategy? 
-    - ⭕️ Define bottlenecks and continuosly measuring, testing and improving the solution.
+    - 🟢 Define bottlenecks and continuosly measure, test and improve solutions.
 - ❓ If there will be million of tests - what strategy should we use to work with testing? 
-    - ⭕️ Perfect result: Run only those tests that weren't tested before. Other tests should be splitted and run on schedule.
+    - 🟢 Perfect result: Run only those tests that weren't tested before. Other tests should be splitted and run on schedule.
 - ❓ What is the ratio of test time and test coverage we want to achieve?
-    - ⭕️ Perfect result: Close to the 0. (Example: 1s/99%)
+    - 🟢 Perfect result: Close to the 0. (Example: 1s/99%)
 - ❓ What is our definition of delivering the product?
-    - ⭕️ Product delivered when user downloaded the app, can access to the essential features.
+    - 🟢 Product delivered when user downloaded the app, can access to the essential features.
 - ❓ What is our strategy of the delivering the product?
-    - ⭕️ Product should be ready to be shipped any time.
+    - 🟢 Product should be ready to be shipped any time.
 - ❓ What is the lifecycle of our feature?
-    - ⭕️ Feature should be asked in different stages: before development, during development and after development. For each of the stage should be metrics to measure. (ex.: Feedback Loop)
+    - 🟢 Feature should be refined in different stages: before development, during development and after development. For each of the stage should be metrics to measure. (ex.: Feedback Loop)
 
 
