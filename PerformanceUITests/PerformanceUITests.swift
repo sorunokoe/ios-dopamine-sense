@@ -1,13 +1,13 @@
 //
-//  DopamineSenseUITests.swift
-//  DopamineSenseUITests
+//  PerformanceUITests.swift
+//  PerformanceUITests
 //
 //  Created by SALGARA, YESKENDIR on 13.11.24.
 //
 
 import XCTest
 
-final class DopamineSenseUITests: XCTestCase {
+final class PerformanceUITests: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
@@ -23,21 +23,13 @@ final class DopamineSenseUITests: XCTestCase {
     }
 
     @MainActor
-    func testExample() throws {
-        // UI tests must launch the application that they test.
-        let app = XCUIApplication()
-        app.launch()
-
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
-
-    @MainActor
     func testLaunchPerformance() throws {
-        if #available(macOS 10.15, iOS 13.0, tvOS 13.0, watchOS 7.0, *) {
-            // This measures how long it takes to launch your application.
-            measure(metrics: [XCTApplicationLaunchMetric()]) {
-                XCUIApplication().launch()
-            }
+        measure(metrics: [XCTApplicationLaunchMetric(),
+                          XCTMemoryMetric(),
+                          XCTCPUMetric(),
+                          XCTStorageMetric()
+                         ]) {
+            XCUIApplication().launch()
         }
     }
 }

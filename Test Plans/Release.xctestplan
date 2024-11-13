@@ -1,15 +1,15 @@
 {
   "configurations" : [
     {
-      "id" : "C10890B9-E986-467F-BBE9-4D4C9C8216FE",
-      "name" : "Test Scheme Action",
+      "id" : "490552A3-44BF-4DE2-8B36-9541656931CA",
+      "name" : "Configuration 1",
       "options" : {
 
       }
     }
   ],
   "defaultOptions" : {
-    "distributor" : "com.apple.TestFlight",
+    "codeCoverage" : false,
     "mainThreadCheckerEnabled" : false,
     "preferredScreenCaptureFormat" : "screenshot",
     "targetForVariableExpansion" : {
@@ -17,11 +17,13 @@
       "identifier" : "7CED4E692CE48DE200412A6B",
       "name" : "DopamineSense"
     },
+    "testRepetitionMode" : "retryOnFailure",
+    "testTimeoutsEnabled" : true,
+    "uiTestingScreenshotsLifetime" : "keepNever",
     "userAttachmentLifetime" : "keepNever"
   },
   "testTargets" : [
     {
-      "parallelizable" : true,
       "target" : {
         "containerPath" : "container:DopamineSense.xcodeproj",
         "identifier" : "7CED4E7D2CE48DE300412A6B",
@@ -29,7 +31,6 @@
       }
     },
     {
-      "parallelizable" : true,
       "target" : {
         "containerPath" : "container:DopamineSense.xcodeproj",
         "identifier" : "7CED4E872CE48DE300412A6B",

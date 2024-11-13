@@ -9,6 +9,11 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
+		<key>QA.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
@@ -23,6 +28,11 @@
 			<true/>
 		</dict>
 		<key>7CED4E872CE48DE300412A6B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>7CED4EF22CE4D06200412A6B</key>
 		<dict>
 			<key>primary</key>
 			<true/>

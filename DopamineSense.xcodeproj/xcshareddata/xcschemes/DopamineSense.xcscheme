@@ -30,7 +30,13 @@
       shouldUseLaunchSchemeArgsEnv = "YES">
       <TestPlans>
          <TestPlanReference
-            reference = "container:DopamineSense.xctestplan"
+            reference = "container:../Release.xctestplan">
+         </TestPlanReference>
+         <TestPlanReference
+            reference = "container:../Performance.xctestplan">
+         </TestPlanReference>
+         <TestPlanReference
+            reference = "container:Pull Request.xctestplan"
             default = "YES">
          </TestPlanReference>
       </TestPlans>
@@ -54,6 +60,17 @@
                BlueprintIdentifier = "7CED4E872CE48DE300412A6B"
                BuildableName = "DopamineSenseUITests.xctest"
                BlueprintName = "DopamineSenseUITests"
+               ReferencedContainer = "container:DopamineSense.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO"
+            parallelizable = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "7CED4EF22CE4D06200412A6B"
+               BuildableName = "PerformanceUITests.xctest"
+               BlueprintName = "PerformanceUITests"
                ReferencedContainer = "container:DopamineSense.xcodeproj">
             </BuildableReference>
          </TestableReference>
