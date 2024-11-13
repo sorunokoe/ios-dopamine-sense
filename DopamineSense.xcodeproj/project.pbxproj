@@ -27,6 +27,7 @@
 		7CED4E6A2CE48DE200412A6B /* DopamineSense.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DopamineSense.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7CED4E7E2CE48DE300412A6B /* DopamineSenseTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DopamineSenseTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7CED4E882CE48DE300412A6B /* DopamineSenseUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DopamineSenseUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7CED4EC42CE4BEB100412A6B /* DopamineSense.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = DopamineSense.xctestplan; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -88,6 +89,7 @@
 		7CED4E612CE48DE200412A6B = {
 			isa = PBXGroup;
 			children = (
+				7CED4EC42CE4BEB100412A6B /* DopamineSense.xctestplan */,
 				7CED4E6C2CE48DE200412A6B /* DopamineSense */,
 				7CED4E812CE48DE300412A6B /* DopamineSenseTests */,
 				7CED4E8B2CE48DE300412A6B /* DopamineSenseUITests */,
@@ -482,6 +484,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = JZ3234T7L7;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				MARKETING_VERSION = 1.0;
@@ -501,6 +504,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = JZ3234T7L7;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				MARKETING_VERSION = 1.0;
@@ -519,6 +523,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = JZ3234T7L7;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.salgara.DopamineSenseUITests;
@@ -536,6 +541,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = JZ3234T7L7;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.salgara.DopamineSenseUITests;
