@@ -24,12 +24,48 @@ final class PerformanceUITests: XCTestCase {
 
     @MainActor
     func testLaunchPerformance() throws {
-        measure(metrics: [XCTApplicationLaunchMetric(),
-                          XCTMemoryMetric(),
-                          XCTCPUMetric(),
-                          XCTStorageMetric()
-                         ]) {
+        measure(metrics: [XCTApplicationLaunchMetric()]) {
             XCUIApplication().launch()
         }
     }
+    
+    @MainActor
+    func testMemoryPerformance() throws {
+        measure(metrics: [XCTMemoryMetric()]) {
+            XCUIApplication().launch()
+        }
+    }
+    
+    @MainActor
+    func testCPUPerformance() throws {
+        measure(metrics: [XCTCPUMetric()]) {
+            XCUIApplication().launch()
+        }
+    }
+    
+    @MainActor
+    func testStoragePerformance() throws {
+        measure(metrics: [XCTStorageMetric()]) {
+            XCUIApplication().launch()
+        }
+    }
+    
+//    @MainActor
+//    func testChatScrollPerformance() {
+//        let app = XCUIApplication()
+//        app.launch()
+//
+//        let chatCollectionView = app.collectionViews[""]
+//        let measureOptions = XCTMeasureOptions()
+//        measureOptions.invocationOptions = [.manuallyStop]
+//
+//        measure(
+//            metrics: [XCTOSSignpostMetric.scrollingAndDecelerationMetric],
+//            options: measureOptions
+//        ) {
+//            chatCollectionView.swipeUp(velocity: .fast)
+//            stopMeasuring()
+//            chatCollectionView.swipeDown(velocity: .fast)
+//        }
+//    }
 }

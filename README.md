@@ -13,16 +13,17 @@ Beta stage: MetricKit.\
 Public Release stage: MetricKit, Xcode Metrics Orginizer.
 
 #### Metrics:
-- Build time
-    - Resolving dependencies time ✅
-    - Compile time ✅
+- Build time [~4s]
+    - Resolving dependencies time ✅ [~0.01]
+    - Compile time ✅ [~2s]
         - SIL Optimizations 🟡
-    - Linking time ✅
-- Test time
-     - Tests time (Unit, UI) ✅
-     - Test coverage ✅
+    - Linking time ✅ [~0.01]
+- Tests
+     - Test time (Unit, UI) ✅ [~5s]
+     - Test coverage ✅ [70%]
+     - Time/Coverage ✅ [0.07]
 - Launch time
-    - Application launch ✅
+    - Application launch ✅ [1.1s]
     - Loading Mach-O, dylb time 🟡
 - App size
     - Targets 🟡
@@ -32,9 +33,13 @@ Public Release stage: MetricKit, Xcode Metrics Orginizer.
         - Other resources
 - Performance
     - Memory ✅
+        - Physical Memory: On Launch [4mb]
     - CPU ✅
-    - Storage (I/O) ✅
-    - Hitches ✅
+        - CPU time On Launch [0.088s]
+        - CPU Instructions Retired [422m]
+        - CPU Cycles [208mC] 
+    - Storage (I/O) ✅ [0kB]
+    - Hitches ✅ [none]
     - Others (Networking, Battery, Signpost Metrics) 🟡
 
 ---
@@ -79,7 +84,7 @@ Static libraries when possible & Mergable dynamic libraries
     - Add translations
 
 #### CI/CD Pipelines:
-- 👾 Pull Request
+- 👾 Pull Request [~3m]
     - Build ✅
     - Test: Pull Request Test Plan ✅
     - Static Analyzer 🟡
