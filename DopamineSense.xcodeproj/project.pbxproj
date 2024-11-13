@@ -21,12 +21,20 @@
 			remoteGlobalIDString = 7CED4E692CE48DE200412A6B;
 			remoteInfo = DopamineSense;
 		};
+		7CED4EF92CE4D06200412A6B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7CED4E622CE48DE200412A6B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7CED4E692CE48DE200412A6B;
+			remoteInfo = DopamineSense;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		7CED4E6A2CE48DE200412A6B /* DopamineSense.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DopamineSense.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7CED4E7E2CE48DE300412A6B /* DopamineSenseTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DopamineSenseTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7CED4E882CE48DE300412A6B /* DopamineSenseUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DopamineSenseUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7CED4EF32CE4D06200412A6B /* PerformanceUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PerformanceUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -58,6 +66,16 @@
 			path = DopamineSenseUITests;
 			sourceTree = "<group>";
 		};
+		7CED4EF42CE4D06200412A6B /* PerformanceUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = PerformanceUITests;
+			sourceTree = "<group>";
+		};
+		7CED4EFF2CE4D72F00412A6B /* Test Plans */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "Test Plans";
+			sourceTree = "<group>";
+		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,15 +100,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		7CED4EF02CE4D06200412A6B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		7CED4E612CE48DE200412A6B = {
 			isa = PBXGroup;
 			children = (
+				7CED4EFF2CE4D72F00412A6B /* Test Plans */,
 				7CED4E6C2CE48DE200412A6B /* DopamineSense */,
 				7CED4E812CE48DE300412A6B /* DopamineSenseTests */,
 				7CED4E8B2CE48DE300412A6B /* DopamineSenseUITests */,
+				7CED4EF42CE4D06200412A6B /* PerformanceUITests */,
 				7CED4E6B2CE48DE200412A6B /* Products */,
 			);
 			sourceTree = "<group>";
@@ -101,6 +128,7 @@
 				7CED4E6A2CE48DE200412A6B /* DopamineSense.app */,
 				7CED4E7E2CE48DE300412A6B /* DopamineSenseTests.xctest */,
 				7CED4E882CE48DE300412A6B /* DopamineSenseUITests.xctest */,
+				7CED4EF32CE4D06200412A6B /* PerformanceUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -176,6 +204,29 @@
 			productReference = 7CED4E882CE48DE300412A6B /* DopamineSenseUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		7CED4EF22CE4D06200412A6B /* PerformanceUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7CED4EFB2CE4D06200412A6B /* Build configuration list for PBXNativeTarget "PerformanceUITests" */;
+			buildPhases = (
+				7CED4EEF2CE4D06200412A6B /* Sources */,
+				7CED4EF02CE4D06200412A6B /* Frameworks */,
+				7CED4EF12CE4D06200412A6B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7CED4EFA2CE4D06200412A6B /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				7CED4EF42CE4D06200412A6B /* PerformanceUITests */,
+			);
+			name = PerformanceUITests;
+			packageProductDependencies = (
+			);
+			productName = PerformanceUITests;
+			productReference = 7CED4EF32CE4D06200412A6B /* PerformanceUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -194,6 +245,10 @@
 						TestTargetID = 7CED4E692CE48DE200412A6B;
 					};
 					7CED4E872CE48DE300412A6B = {
+						CreatedOnToolsVersion = 16.0;
+						TestTargetID = 7CED4E692CE48DE200412A6B;
+					};
+					7CED4EF22CE4D06200412A6B = {
 						CreatedOnToolsVersion = 16.0;
 						TestTargetID = 7CED4E692CE48DE200412A6B;
 					};
@@ -216,6 +271,7 @@
 				7CED4E692CE48DE200412A6B /* DopamineSense */,
 				7CED4E7D2CE48DE300412A6B /* DopamineSenseTests */,
 				7CED4E872CE48DE300412A6B /* DopamineSenseUITests */,
+				7CED4EF22CE4D06200412A6B /* PerformanceUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -236,6 +292,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		7CED4E862CE48DE300412A6B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7CED4EF12CE4D06200412A6B /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -266,6 +329,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		7CED4EEF2CE4D06200412A6B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -278,6 +348,11 @@
 			isa = PBXTargetDependency;
 			target = 7CED4E692CE48DE200412A6B /* DopamineSense */;
 			targetProxy = 7CED4E892CE48DE300412A6B /* PBXContainerItemProxy */;
+		};
+		7CED4EFA2CE4D06200412A6B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7CED4E692CE48DE200412A6B /* DopamineSense */;
+			targetProxy = 7CED4EF92CE4D06200412A6B /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -295,21 +370,27 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = DopamineSense/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Dopamine Sense";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.healthcare-fitness";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.salgara.DopamineSense;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.salgara.dopamine-sense";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -326,21 +407,27 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = DopamineSense/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Dopamine Sense";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.healthcare-fitness";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.salgara.DopamineSense;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.salgara.dopamine-sense";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -470,6 +557,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = JZ3234T7L7;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				MARKETING_VERSION = 1.0;
@@ -489,6 +577,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = JZ3234T7L7;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				MARKETING_VERSION = 1.0;
@@ -507,6 +596,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = JZ3234T7L7;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.salgara.DopamineSenseUITests;
@@ -524,9 +614,44 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = JZ3234T7L7;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.salgara.DopamineSenseUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = DopamineSense;
+			};
+			name = Release;
+		};
+		7CED4EFC2CE4D06200412A6B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = JZ3234T7L7;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.salgara.PerformanceUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = DopamineSense;
+			};
+			name = Debug;
+		};
+		7CED4EFD2CE4D06200412A6B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = JZ3234T7L7;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.salgara.PerformanceUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
@@ -570,6 +695,15 @@
 			buildConfigurations = (
 				7CED4E9A2CE48DE300412A6B /* Debug */,
 				7CED4E9B2CE48DE300412A6B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7CED4EFB2CE4D06200412A6B /* Build configuration list for PBXNativeTarget "PerformanceUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7CED4EFC2CE4D06200412A6B /* Debug */,
+				7CED4EFD2CE4D06200412A6B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

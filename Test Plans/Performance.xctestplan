@@ -1,0 +1,39 @@
+{
+  "configurations" : [
+    {
+      "id" : "F9F454B0-93E0-4562-AFD8-DDE97058ADDF",
+      "name" : "Configuration 1",
+      "options" : {
+        "addressSanitizer" : {
+          "enabled" : false
+        },
+        "targetForVariableExpansion" : {
+          "containerPath" : "container:DopamineSense.xcodeproj",
+          "identifier" : "7CED4E692CE48DE200412A6B",
+          "name" : "DopamineSense"
+        }
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "nsZombieEnabled" : true,
+    "targetForVariableExpansion" : {
+      "containerPath" : "container:DopamineSense.xcodeproj",
+      "identifier" : "7CED4E692CE48DE200412A6B",
+      "name" : "DopamineSense"
+    },
+    "testTimeoutsEnabled" : true,
+    "threadSanitizerEnabled" : true,
+    "undefinedBehaviorSanitizerEnabled" : true
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:DopamineSense.xcodeproj",
+        "identifier" : "7CED4EF22CE4D06200412A6B",
+        "name" : "PerformanceUITests"
+      }
+    }
+  ],
+  "version" : 1
+}
