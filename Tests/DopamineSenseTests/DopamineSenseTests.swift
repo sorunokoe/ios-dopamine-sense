@@ -20,11 +20,11 @@ struct DopamineSenseTests {
         model.log(activity: activity)
         let timeline = try #require(await model.dataPoints)
         let expectedTimeline = [
-            DataPoint(value: 0, dateTime: Date()),
-            DataPoint(value: activity.dopamineBoostPercentage, dateTime: Date.hour(after: activity.peakDopamineHour)),
-            DataPoint(value: 0, dateTime: Date.hour(after: activity.peakDopamineHour + activity.longevityInHour)),
-            DataPoint(value: activity.dopamineDeficit, dateTime: Date.hour(after: activity.peakDopamineHour + activity.longevityInHour + activity.recoveryTimeInHour)),
-            DataPoint(value: 0, dateTime: Date.hour(after: activity.peakDopamineHour + activity.longevityInHour + activity.recoveryTimeInHour + 1)),
+            DataPoint(label: activity.title, value: 0, dateTime: Date()),
+            DataPoint(label: activity.title, value: activity.dopamineBoostPercentage, dateTime: Date.hour(after: activity.peakDopamineHour)),
+            DataPoint(label: activity.title, value: 0, dateTime: Date.hour(after: activity.peakDopamineHour + activity.longevityInHour)),
+            DataPoint(label: activity.title, value: activity.dopamineDeficit, dateTime: Date.hour(after: activity.peakDopamineHour + activity.longevityInHour + activity.recoveryTimeInHour)),
+            DataPoint(label: activity.title, value: 0, dateTime: Date.hour(after: activity.peakDopamineHour + activity.longevityInHour + activity.recoveryTimeInHour + 1)),
         ]
         #expect(timeline == expectedTimeline)
     }
