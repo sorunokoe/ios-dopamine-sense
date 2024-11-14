@@ -5,16 +5,28 @@
 //  Created by SALGARA, YESKENDIR on 13.11.24.
 //
 
-import SwiftUI
 import SwiftData
+import SwiftUI
 
-import SenseDataSource
+import DopamineTracker
 
 @main
 struct DopamineSenseApp: App {
+    let dopamineTrackerView: AnyView = .init(DopamineTrackerView(
+        configuration: .init(upLabel: "High lv. dopamine",
+                             middleLabel: "Normal lv. dopamine",
+                             downLabel: "Low lv. dopamine"),
+        style: .init(foreground: .foreground, lineColor: .accent, middleColor: .yellow)
+    ))
+    
+    let detailsView: AnyView = .init(Text("Details"))
+
     var body: some Scene {
         WindowGroup {
-            HomeView(model: DopamineModel(dataSource: SenseDataSource()))
+            HomeView(
+                dopamineTrackerView: dopamineTrackerView,
+                detailsView: detailsView
+            )
         }
     }
 }

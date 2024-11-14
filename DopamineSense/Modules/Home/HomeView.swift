@@ -8,34 +8,17 @@
 import SwiftData
 import SwiftUI
 
-import SenseDataSource
-import SenseUI
-
 struct HomeView: View {
-    
-    @ObservedObject var model: DopamineModel
-    
-    @State private var detailsAvailable: Bool = true
-    @State private var selection: PresentationDetent = .fraction(0.4)
-    @State private var sheetContentHeight = CGFloat(0)
-    
-    init(model: DopamineModel) {
-        self.model = model
-    }
+    let dopamineTrackerView: AnyView
+    let detailsView: AnyView
+
+    @State private var state = ViewState()
 
     var body: some View {
         dashboardView
-            .sheet(isPresented: $detailsAvailable, content: {
-                DetailsView(model: model)
-                    .background {
-                        GeometryReader { proxy in
-                            Color.clear
-                                .task {
-                                    sheetContentHeight = proxy.size.height
-                                }
-                        }
-                    }
-                    .presentationDetents([.fraction(0.4)], selection: $selection)
+            .sheet(isPresented: $state.detailsAvailable, content: {
+                detailsView
+                    .presentationDetents([.fraction(0.4)], selection: $state.selection)
                     .interactiveDismissDisabled()
                     .presentationBackgroundInteraction(.enabled(upThrough: .fraction(0.4)))
                     .presentationCornerRadius(32)
@@ -46,38 +29,32 @@ struct HomeView: View {
     @ViewBuilder
     var dashboardView: some View {
         VStack {
-            DashboardView(
-                style: .init(
-                    lineColor: .accent,
-                    middleColor: .primary.opacity(0.8)
-                ),
-                configuration: .init(
-                    upLabel: Configurations.upLabel,
-                    middleLabel: Configurations.middleLabel,
-                    downLabel: Configurations.downLabel
-                ),
-                dataPoints: model.dataPoints
-            )
+            dopamineTrackerView
             Spacer()
             Rectangle()
                 .fill(.clear)
-                .frame(height: sheetContentHeight)
+                .frame(height: 300)
         }
     }
 }
 
-private extension HomeView {
- 
-    struct Configurations {
-        static let upLabel: String = "High level of Dopamine"
-        static let middleLabel: String = "Normal level of Dopamine"
-        static let downLabel: String = "Low level of Dopamine"
+extension HomeView {
+    struct ViewState {
+        var detailsAvailable: Bool = true
+        var selection: PresentationDetent = .fraction(0.4)
     }
-    
 }
 
 #if DEBUG
+import DopamineTracker
+
 #Preview {
-    HomeView(model: DopamineModel(dataSource: SenseDataSource()))
+    HomeView(
+        dopamineTrackerView: AnyView(DopamineTrackerView(
+            configuration: .init(upLabel: "High", middleLabel: "Normal", downLabel: "Low"),
+            style: .init(foreground: .foreground, lineColor: .foreground, middleColor: .accent)
+        )),
+        detailsView: AnyView(Text("Details"))
+    )
 }
 #endif
