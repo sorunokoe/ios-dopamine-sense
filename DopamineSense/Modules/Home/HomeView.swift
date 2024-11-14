@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  HomeView.swift
 //  DopamineSense
 //
 //  Created by SALGARA, YESKENDIR on 13.11.24.
@@ -11,17 +11,22 @@ import SwiftUI
 import SenseDataSource
 import SenseUI
 
-struct ContentView: View {
-
-    @State var detailsAvailable: Bool = true
-    @State var selection: PresentationDetent = .fraction(0.4)
+struct HomeView: View {
+    
+    @ObservedObject var model: DopamineModel
+    
+    @State private var detailsAvailable: Bool = true
+    @State private var selection: PresentationDetent = .fraction(0.4)
     @State private var sheetContentHeight = CGFloat(0)
-    @State private var selectedActivity: SenseActivityType?
+    
+    init(model: DopamineModel) {
+        self.model = model
+    }
 
     var body: some View {
         dashboardView
             .sheet(isPresented: $detailsAvailable, content: {
-                detailsView
+                DetailsView(model: model)
                     .background {
                         GeometryReader { proxy in
                             Color.clear
@@ -30,10 +35,7 @@ struct ContentView: View {
                                 }
                         }
                     }
-                    .presentationDetents(
-                        [.fraction(0.4)],
-                        selection: $selection
-                    )
+                    .presentationDetents([.fraction(0.4)], selection: $selection)
                     .interactiveDismissDisabled()
                     .presentationBackgroundInteraction(.enabled(upThrough: .fraction(0.4)))
                     .presentationCornerRadius(32)
@@ -46,15 +48,15 @@ struct ContentView: View {
         VStack {
             DashboardView(
                 style: .init(
-                    lineColor: .indigo,
-                    middleColor: .yellow
+                    lineColor: .accent,
+                    middleColor: .primary.opacity(0.8)
                 ),
                 configuration: .init(
-                    upLabel: "High level of Dopamine",
-                    middleLabel: "Regular",
-                    downLabel: "Low level of Dopamine"
+                    upLabel: Configurations.upLabel,
+                    middleLabel: Configurations.middleLabel,
+                    downLabel: Configurations.downLabel
                 ),
-                dataPoints: dataPoints
+                dataPoints: model.dataPoints
             )
             Spacer()
             Rectangle()
@@ -64,6 +66,18 @@ struct ContentView: View {
     }
 }
 
-#Preview {
-    ContentView()
+private extension HomeView {
+ 
+    struct Configurations {
+        static let upLabel: String = "High level of Dopamine"
+        static let middleLabel: String = "Normal level of Dopamine"
+        static let downLabel: String = "Low level of Dopamine"
+    }
+    
 }
+
+#if DEBUG
+#Preview {
+    HomeView(model: DopamineModel(dataSource: SenseDataSource()))
+}
+#endif

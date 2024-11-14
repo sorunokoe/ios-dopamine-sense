@@ -8,11 +8,13 @@
 import SwiftUI
 import SwiftData
 
+import SenseDataSource
+
 @main
 struct DopamineSenseApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            HomeView(model: DopamineModel(dataSource: SenseDataSource()))
         }
     }
 }

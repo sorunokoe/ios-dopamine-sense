@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		7CAB9D992CE51A31002717DA /* SenseUI in Frameworks */ = {isa = PBXBuildFile; productRef = 7CAB9D982CE51A31002717DA /* SenseUI */; };
+		7CAB9DBE2CE52992002717DA /* SenseDataSource in Frameworks */ = {isa = PBXBuildFile; productRef = 7CAB9DBD2CE52992002717DA /* SenseDataSource */; };
+		7CC49C9A2CE52A2B00CDED8C /* SenseDataSource in Frameworks */ = {isa = PBXBuildFile; productRef = 7CC49C992CE52A2B00CDED8C /* SenseDataSource */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -111,6 +113,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7CC49C9A2CE52A2B00CDED8C /* SenseDataSource in Frameworks */,
+				7CAB9DBE2CE52992002717DA /* SenseDataSource in Frameworks */,
 				7CAB9D992CE51A31002717DA /* SenseUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -181,6 +185,8 @@
 			name = DopamineSense;
 			packageProductDependencies = (
 				7CAB9D982CE51A31002717DA /* SenseUI */,
+				7CAB9DBD2CE52992002717DA /* SenseDataSource */,
+				7CC49C992CE52A2B00CDED8C /* SenseDataSource */,
 			);
 			productName = DopamineSense;
 			productReference = 7CED4E6A2CE48DE200412A6B /* DopamineSense.app */;
@@ -284,6 +290,7 @@
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
 				7CAB9D972CE51A31002717DA /* XCLocalSwiftPackageReference "Dependencies/SenseUI" */,
+				7CC49C982CE52A2B00CDED8C /* XCLocalSwiftPackageReference "Dependencies/SenseDataSource" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 7CED4E6B2CE48DE200412A6B /* Products */;
@@ -737,12 +744,24 @@
 			isa = XCLocalSwiftPackageReference;
 			relativePath = Dependencies/SenseUI;
 		};
+		7CC49C982CE52A2B00CDED8C /* XCLocalSwiftPackageReference "Dependencies/SenseDataSource" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = Dependencies/SenseDataSource;
+		};
 /* End XCLocalSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
 		7CAB9D982CE51A31002717DA /* SenseUI */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = SenseUI;
+		};
+		7CAB9DBD2CE52992002717DA /* SenseDataSource */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = SenseDataSource;
+		};
+		7CC49C992CE52A2B00CDED8C /* SenseDataSource */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = SenseDataSource;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
