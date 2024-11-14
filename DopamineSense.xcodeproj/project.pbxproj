@@ -6,6 +6,10 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		7CAB9D992CE51A31002717DA /* SenseUI in Frameworks */ = {isa = PBXBuildFile; productRef = 7CAB9D982CE51A31002717DA /* SenseUI */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		7CED4E7F2CE48DE300412A6B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -38,6 +42,39 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		7CAB9D842CE4FC23002717DA /* Exceptions for "Tests" folder in "DopamineSense" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				DopamineSenseTests/DopamineSenseTests.swift,
+				DopamineSenseUITests/DopamineSenseUITestsLaunchTests.swift,
+				PerformanceUITests/PerformanceUITests.swift,
+				"Test Plans/Performance.xctestplan",
+				"Test Plans/Pull Request.xctestplan",
+				"Test Plans/Release.xctestplan",
+			);
+			target = 7CED4E692CE48DE200412A6B /* DopamineSense */;
+		};
+		7CAB9D8E2CE4FC27002717DA /* Exceptions for "Tests" folder in "DopamineSenseTests" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				DopamineSenseTests/DopamineSenseTests.swift,
+			);
+			target = 7CED4E7D2CE48DE300412A6B /* DopamineSenseTests */;
+		};
+		7CAB9D8F2CE4FC27002717DA /* Exceptions for "Tests" folder in "DopamineSenseUITests" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				DopamineSenseUITests/DopamineSenseUITestsLaunchTests.swift,
+			);
+			target = 7CED4E872CE48DE300412A6B /* DopamineSenseUITests */;
+		};
+		7CAB9D902CE4FC27002717DA /* Exceptions for "Tests" folder in "PerformanceUITests" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				PerformanceUITests/PerformanceUITests.swift,
+			);
+			target = 7CED4EF22CE4D06200412A6B /* PerformanceUITests */;
+		};
 		7CED4E902CE48DE300412A6B /* Exceptions for "DopamineSense" folder in "DopamineSense" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
@@ -48,32 +85,23 @@
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
+		7CAB9D7F2CE4FC1D002717DA /* Tests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				7CAB9D842CE4FC23002717DA /* Exceptions for "Tests" folder in "DopamineSense" target */,
+				7CAB9D8E2CE4FC27002717DA /* Exceptions for "Tests" folder in "DopamineSenseTests" target */,
+				7CAB9D8F2CE4FC27002717DA /* Exceptions for "Tests" folder in "DopamineSenseUITests" target */,
+				7CAB9D902CE4FC27002717DA /* Exceptions for "Tests" folder in "PerformanceUITests" target */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
 		7CED4E6C2CE48DE200412A6B /* DopamineSense */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
 				7CED4E902CE48DE300412A6B /* Exceptions for "DopamineSense" folder in "DopamineSense" target */,
 			);
 			path = DopamineSense;
-			sourceTree = "<group>";
-		};
-		7CED4E812CE48DE300412A6B /* DopamineSenseTests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = DopamineSenseTests;
-			sourceTree = "<group>";
-		};
-		7CED4E8B2CE48DE300412A6B /* DopamineSenseUITests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = DopamineSenseUITests;
-			sourceTree = "<group>";
-		};
-		7CED4EF42CE4D06200412A6B /* PerformanceUITests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = PerformanceUITests;
-			sourceTree = "<group>";
-		};
-		7CED4EFF2CE4D72F00412A6B /* Test Plans */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = "Test Plans";
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -83,6 +111,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7CAB9D992CE51A31002717DA /* SenseUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -113,11 +142,8 @@
 		7CED4E612CE48DE200412A6B = {
 			isa = PBXGroup;
 			children = (
-				7CED4EFF2CE4D72F00412A6B /* Test Plans */,
+				7CAB9D7F2CE4FC1D002717DA /* Tests */,
 				7CED4E6C2CE48DE200412A6B /* DopamineSense */,
-				7CED4E812CE48DE300412A6B /* DopamineSenseTests */,
-				7CED4E8B2CE48DE300412A6B /* DopamineSenseUITests */,
-				7CED4EF42CE4D06200412A6B /* PerformanceUITests */,
 				7CED4E6B2CE48DE200412A6B /* Products */,
 			);
 			sourceTree = "<group>";
@@ -149,10 +175,12 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
+				7CAB9D7F2CE4FC1D002717DA /* Tests */,
 				7CED4E6C2CE48DE200412A6B /* DopamineSense */,
 			);
 			name = DopamineSense;
 			packageProductDependencies = (
+				7CAB9D982CE51A31002717DA /* SenseUI */,
 			);
 			productName = DopamineSense;
 			productReference = 7CED4E6A2CE48DE200412A6B /* DopamineSense.app */;
@@ -170,9 +198,6 @@
 			);
 			dependencies = (
 				7CED4E802CE48DE300412A6B /* PBXTargetDependency */,
-			);
-			fileSystemSynchronizedGroups = (
-				7CED4E812CE48DE300412A6B /* DopamineSenseTests */,
 			);
 			name = DopamineSenseTests;
 			packageProductDependencies = (
@@ -194,9 +219,6 @@
 			dependencies = (
 				7CED4E8A2CE48DE300412A6B /* PBXTargetDependency */,
 			);
-			fileSystemSynchronizedGroups = (
-				7CED4E8B2CE48DE300412A6B /* DopamineSenseUITests */,
-			);
 			name = DopamineSenseUITests;
 			packageProductDependencies = (
 			);
@@ -216,9 +238,6 @@
 			);
 			dependencies = (
 				7CED4EFA2CE4D06200412A6B /* PBXTargetDependency */,
-			);
-			fileSystemSynchronizedGroups = (
-				7CED4EF42CE4D06200412A6B /* PerformanceUITests */,
 			);
 			name = PerformanceUITests;
 			packageProductDependencies = (
@@ -263,6 +282,9 @@
 			);
 			mainGroup = 7CED4E612CE48DE200412A6B;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				7CAB9D972CE51A31002717DA /* XCLocalSwiftPackageReference "Dependencies/SenseUI" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 7CED4E6B2CE48DE200412A6B /* Products */;
 			projectDirPath = "";
@@ -709,6 +731,20 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCLocalSwiftPackageReference section */
+		7CAB9D972CE51A31002717DA /* XCLocalSwiftPackageReference "Dependencies/SenseUI" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = Dependencies/SenseUI;
+		};
+/* End XCLocalSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		7CAB9D982CE51A31002717DA /* SenseUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = SenseUI;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 7CED4E622CE48DE200412A6B /* Project object */;
 }
