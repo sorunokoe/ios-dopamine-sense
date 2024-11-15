@@ -16,15 +16,19 @@
     }
   ],
   "defaultOptions" : {
-    "nsZombieEnabled" : true,
+    "codeCoverage" : false,
+    "environmentVariableEntries" : [
+
+    ],
+    "mainThreadCheckerEnabled" : false,
+    "preferredScreenCaptureFormat" : "screenshot",
     "targetForVariableExpansion" : {
       "containerPath" : "container:DopamineSense.xcodeproj",
       "identifier" : "7CED4E692CE48DE200412A6B",
       "name" : "DopamineSense"
     },
     "testTimeoutsEnabled" : true,
-    "threadSanitizerEnabled" : true,
-    "undefinedBehaviorSanitizerEnabled" : true
+    "uiTestingScreenshotsLifetime" : "keepNever"
   },
   "testTargets" : [
     {

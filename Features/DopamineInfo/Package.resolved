@@ -1,0 +1,15 @@
+{
+  "originHash" : "871ea1160f4e859a4151121c0464893e012d0213bf2e746dad07202071debc40",
+  "pins" : [
+    {
+      "identity" : "chatgptservice",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/sorunokoe/ChatGPTService",
+      "state" : {
+        "branch" : "main",
+        "revision" : "c2573614e2ef5d3f4f9a2f71cc760b21f128356c"
+      }
+    }
+  ],
+  "version" : 3
+}

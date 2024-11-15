@@ -73,7 +73,7 @@ public struct DopamineTrackerView: View {
                             .resizable()
                             .frame(width: 32, height: 32)
                             .padding(16)
-                            .background(.black.opacity(0.1))
+                            .background(.blue.opacity(0.1))
                             .clipShape(Circle())
                             .padding(.horizontal, 32)
                     }

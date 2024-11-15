@@ -18,7 +18,7 @@ struct HomeView: View {
         dashboardView
             .sheet(isPresented: $state.detailsAvailable, content: {
                 detailsView
-                    .presentationDetents([.fraction(0.4)], selection: $state.selection)
+                    .presentationDetents([.fraction(0.4), .fraction(0.9)], selection: $state.selection)
                     .interactiveDismissDisabled()
                     .presentationBackgroundInteraction(.enabled(upThrough: .fraction(0.4)))
                     .presentationCornerRadius(32)
@@ -46,6 +46,7 @@ extension HomeView {
 }
 
 #if DEBUG
+import DopamineInfo
 import DopamineTracker
 
 #Preview {
@@ -54,7 +55,9 @@ import DopamineTracker
             configuration: .init(upLabel: "High", middleLabel: "Normal", downLabel: "Low"),
             style: .init(foreground: .foreground, lineColor: .foreground, middleColor: .accent)
         )),
-        detailsView: AnyView(Text("Details"))
+        detailsView: AnyView(DopamineInfoView(token: "", configuration: .init(title: "🌊 Dopamine Sense",
+                                                                              subtitle: "Log your activity",
+                                                                              erorrMessage: "Failed to load information 🐣")))
     )
 }
 #endif

@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		7CC49D222CE68D8200CDED8C /* DopamineTracker in Frameworks */ = {isa = PBXBuildFile; productRef = 7CC49D212CE68D8200CDED8C /* DopamineTracker */; };
+		7CC49D282CE692FB00CDED8C /* DopamineInfo in Frameworks */ = {isa = PBXBuildFile; productRef = 7CC49D272CE692FB00CDED8C /* DopamineInfo */; };
+		7CC49D6C2CE7551600CDED8C /* DopamineInfo in Frameworks */ = {isa = PBXBuildFile; productRef = 7CC49D6B2CE7551600CDED8C /* DopamineInfo */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -112,6 +114,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7CC49D222CE68D8200CDED8C /* DopamineTracker in Frameworks */,
+				7CC49D282CE692FB00CDED8C /* DopamineInfo in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -133,6 +136,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7CC49D6C2CE7551600CDED8C /* DopamineInfo in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -189,6 +193,7 @@
 			name = DopamineSense;
 			packageProductDependencies = (
 				7CC49D212CE68D8200CDED8C /* DopamineTracker */,
+				7CC49D272CE692FB00CDED8C /* DopamineInfo */,
 			);
 			productName = DopamineSense;
 			productReference = 7CED4E6A2CE48DE200412A6B /* DopamineSense.app */;
@@ -249,6 +254,7 @@
 			);
 			name = PerformanceUITests;
 			packageProductDependencies = (
+				7CC49D6B2CE7551600CDED8C /* DopamineInfo */,
 			);
 			productName = PerformanceUITests;
 			productReference = 7CED4EF32CE4D06200412A6B /* PerformanceUITests.xctest */;
@@ -292,6 +298,7 @@
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
 				7CC49D202CE68D8200CDED8C /* XCLocalSwiftPackageReference "Features/DopamineTracker" */,
+				7CC49D262CE692FB00CDED8C /* XCLocalSwiftPackageReference "Features/DopamineInfo" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 7CED4E6B2CE48DE200412A6B /* Products */;
@@ -745,12 +752,25 @@
 			isa = XCLocalSwiftPackageReference;
 			relativePath = Features/DopamineTracker;
 		};
+		7CC49D262CE692FB00CDED8C /* XCLocalSwiftPackageReference "Features/DopamineInfo" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = Features/DopamineInfo;
+		};
 /* End XCLocalSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
 		7CC49D212CE68D8200CDED8C /* DopamineTracker */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = DopamineTracker;
+		};
+		7CC49D272CE692FB00CDED8C /* DopamineInfo */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = DopamineInfo;
+		};
+		7CC49D6B2CE7551600CDED8C /* DopamineInfo */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7CC49D262CE692FB00CDED8C /* XCLocalSwiftPackageReference "Features/DopamineInfo" */;
+			productName = DopamineInfo;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
