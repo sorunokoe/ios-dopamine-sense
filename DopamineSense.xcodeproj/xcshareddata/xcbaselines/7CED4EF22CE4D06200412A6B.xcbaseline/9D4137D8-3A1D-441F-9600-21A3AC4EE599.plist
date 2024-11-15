@@ -40,19 +40,49 @@
 					<string>Local Baseline</string>
 				</dict>
 			</dict>
+			<key>testLaunchPerformanceUntilResponsive()</key>
+			<dict>
+				<key>com.apple.dt.XCTMetric_ApplicationLaunch-ApplicationFirstFramePresentationResponsive.duration</key>
+				<dict>
+					<key>baselineAverage</key>
+					<real>1.181451</real>
+					<key>baselineIntegrationDisplayName</key>
+					<string>Local Baseline</string>
+				</dict>
+			</dict>
 			<key>testMemoryPerformance()</key>
 			<dict>
 				<key>com.apple.dt.XCTMetric_Memory.physical</key>
 				<dict>
 					<key>baselineAverage</key>
-					<real>3991.142400</real>
+					<real>9.830000</real>
 					<key>baselineIntegrationDisplayName</key>
 					<string>Local Baseline</string>
 				</dict>
 				<key>com.apple.dt.XCTMetric_Memory.physical_peak</key>
 				<dict>
 					<key>baselineAverage</key>
-					<real>323537.536000</real>
+					<real>44300.000000</real>
+					<key>baselineIntegrationDisplayName</key>
+					<string>Local Baseline</string>
+				</dict>
+			</dict>
+			<key>testStoragePerformance()</key>
+			<dict>
+				<key>com.apple.dt.XCTMetric_Disk.logical_writes</key>
+				<dict>
+					<key>baselineAverage</key>
+					<real>0.000000</real>
+					<key>baselineIntegrationDisplayName</key>
+					<string>Local Baseline</string>
+				</dict>
+			</dict>
+			<key>testTimePerformance()</key>
+			<dict>
+				<key>com.apple.dt.XCTMetric_Clock.time.monotonic</key>
+				<dict>
+					<key>baselineAverage</key>
+					<real>3.322388</real>
 					<key>baselineIntegrationDisplayName</key>
 					<string>Local Baseline</string>
 				</dict>

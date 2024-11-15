@@ -30,13 +30,13 @@
       shouldUseLaunchSchemeArgsEnv = "YES">
       <TestPlans>
          <TestPlanReference
-            reference = "container:Test Plans/Performance.xctestplan">
+            reference = "container:Tests/Test Plans/Release.xctestplan">
          </TestPlanReference>
          <TestPlanReference
-            reference = "container:Test Plans/Release.xctestplan">
+            reference = "container:Tests/Test Plans/Pull Request.xctestplan">
          </TestPlanReference>
          <TestPlanReference
-            reference = "container:Test Plans/Pull Request.xctestplan"
+            reference = "container:Tests/Test Plans/Performance.xctestplan"
             default = "YES">
          </TestPlanReference>
       </TestPlans>

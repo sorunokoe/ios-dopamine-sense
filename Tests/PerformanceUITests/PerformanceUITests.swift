@@ -6,6 +6,7 @@
 //
 
 import XCTest
+@testable import DopamineInfo
 
 final class PerformanceUITests: XCTestCase {
 
@@ -13,7 +14,7 @@ final class PerformanceUITests: XCTestCase {
         // Put setup code here. This method is called before the invocation of each test method in the class.
 
         // In UI tests it is usually best to stop immediately when a failure occurs.
-        continueAfterFailure = false
+        continueAfterFailure = true
 
         // In UI tests it’s important to set the initial state - such as interface orientation - required for your tests before they run. The setUp method is a good place to do this.
     }
@@ -24,7 +25,14 @@ final class PerformanceUITests: XCTestCase {
 
     @MainActor
     func testLaunchPerformance() throws {
-        measure(metrics: [XCTApplicationLaunchMetric()]) {
+        measure(metrics: [XCTApplicationLaunchMetric(waitUntilResponsive: false)]) {
+            XCUIApplication().launch()
+        }
+    }
+    
+    @MainActor
+    func testLaunchPerformanceUntilResponsive() throws {
+        measure(metrics: [XCTApplicationLaunchMetric(waitUntilResponsive: true)]) {
             XCUIApplication().launch()
         }
     }
@@ -50,22 +58,28 @@ final class PerformanceUITests: XCTestCase {
         }
     }
     
-//    @MainActor
-//    func testChatScrollPerformance() {
-//        let app = XCUIApplication()
-//        app.launch()
-//
-//        let chatCollectionView = app.collectionViews[""]
-//        let measureOptions = XCTMeasureOptions()
-//        measureOptions.invocationOptions = [.manuallyStop]
-//
-//        measure(
-//            metrics: [XCTOSSignpostMetric.scrollingAndDecelerationMetric],
-//            options: measureOptions
-//        ) {
-//            chatCollectionView.swipeUp(velocity: .fast)
-//            stopMeasuring()
-//            chatCollectionView.swipeDown(velocity: .fast)
-//        }
-//    }
+    @MainActor
+    func testTimePerformance() throws {
+        measure(metrics: [XCTClockMetric()]) {
+            XCUIApplication().launch()
+        }
+    }
+    
+    @MainActor
+    func testScrollPerformance() {
+        let app = XCUIApplication()
+        app.launch()
+
+        let measureOptions = XCTMeasureOptions()
+        measureOptions.invocationOptions = [.manuallyStop]
+
+        measure(
+            metrics: [XCTOSSignpostMetric.scrollingAndDecelerationMetric],
+            options: measureOptions
+        ) {
+            app.swipeUp(velocity: .fast)
+            stopMeasuring()
+            app.swipeDown(velocity: .fast)
+        }
+    }
 }
