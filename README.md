@@ -3,6 +3,18 @@
 
 This app helps understand how **dopamine affects mood** by tracking daily activities and predicting emotional states.
 
+## Features:
+- ### 🟢 DopamineTracker
+Helps with predicting dopamine level.
+- ### 🟢 DopamineInfo
+Helps with getting personilized info about the dopamine level.
+
+### Dependencies:
+- SenseDataSource
+- SenseUI
+- SensePersistence
+- ChatGPTService
+
 ## Development:
 
 ### 1. Measurable:
@@ -47,11 +59,11 @@ Public Release stage: MetricKit, Xcode Metrics Orginizer.
 ### 2. Testable
 #### Type-Driven Design & Test-Driven Development
 
-- Type system
+- Type system ✅
 - XCTest & SwiftTest:
-    - Unit tests
-    - Integration tests
-    - UI tests
+    - Unit tests ✅
+    - Integration tests ✅
+    - UI tests ✅
 
 Other tests to consider:
 - Snapshot tests 🟡
@@ -64,10 +76,16 @@ Other tests to consider:
 Static libraries when possible & Mergable dynamic libraries
 
 - Swift Package Manager
-    - UI (Design System)
-    - Data Source
-    - Network
-    - Core
+    - Features
+        - DopamineTracker
+            - UI (Design System) ✅
+            - Data Source ✅
+            - Core 🟡 (Not needed for now)
+        - DopamineInfo
+            - UI (Design System) ✅
+            - Network ✅
+            - Persistence ✅
+            - Core 🟡 (Not needed for now)
 
 #### What we want to achieve?
 - Resolve conflicts between teams work
@@ -83,7 +101,7 @@ Static libraries when possible & Mergable dynamic libraries
 - Localization 🟡
     - Add translations
 
-#### CI/CD Pipelines:
+#### CI/CD Pipelines - Xcode Cloud:
 - 👾 Pull Request [~3m]
     - Build ✅
     - Test: Pull Request Test Plan ✅
@@ -92,7 +110,7 @@ Static libraries when possible & Mergable dynamic libraries
         - Checkmarks
         - Linting
     - Memory analyzer 🟡
-- ☀️ Daily
+- ☀️ Weekly (On Monday)
     - Archive ✅
 - 🤖 Performance [~10min]
     - Build ✅
@@ -108,6 +126,9 @@ Static libraries when possible & Mergable dynamic libraries
 - 🟢 We want to avoid dialects.
 - ❓ If there will be millions of users - what is our strategy? 
     - 🟢 Define bottlenecks and continuosly measure, test and improve solutions.
+    - 🟢 Use caching techniques to avoid high-load on the server:
+        - Runtime cache
+        - Local cache
 - ❓ If there will be million of tests - what strategy should we use to work with testing? 
     - 🟢 Perfect result: Run only those tests that weren't tested before. Other tests should be splitted and run on schedule.
 - ❓ What is the ratio of test time and test coverage we want to achieve?
